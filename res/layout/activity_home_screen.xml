@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:padding="5dp"
+    android:stretchColumns="*" >
+
+    <!-- Table row 0 -->
+
+    <TableRow
+        android:id="@+id/tablerow0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/queryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/queryPrompt"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+    </TableRow>
+
+    <!-- Table row 1 -->
+
+    <TableRow
+        android:id="@+id/tablerow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100" >
+
+        <EditText
+            android:id="@+id/tagEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="50"
+            android:hint="@string/tagPrompt"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/SaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="50"
+            android:text="@string/save" />
+    </TableRow>
+
+    <!-- Table row 2 -->
+
+    <TableRow
+        android:id="@+id/tablerow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Light_Blue" >
+
+        <TextView
+            android:id="@+id/TaggedSearchesTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/darker_gray"
+            android:padding="5dp"
+            android:text="@string/taggedSearches" />
+    </TableRow>
+
+    <!-- Table Row 3 -->
+
+    <TableRow
+        android:id="@+id/tablerow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/Light_Blue" >
+
+        <ScrollView
+            android:id="@+id/QueryScrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Light_Blue"
+            android:padding="8dp" >
+
+            <TableLayout
+                android:id="@+id/QueryTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:stretchColumns="*" >
+            </TableLayout>
+        </ScrollView>
+    </TableRow>
+    
+    <!-- Table row 4 -->
+    
+    <TableRow 
+        android:id="@+id/tablerow4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+        <Button
+            android:id="@+id/ClearTagsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/clearTags" />
+
+    </TableRow>
+
+</TableLayout>
